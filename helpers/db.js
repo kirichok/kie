@@ -4,7 +4,6 @@ var pg = require('pg'),
     pg_client = null,
     pg_done = null;
 
-
 exports.db_init = function (cb) {
     pg.connect(common.getConfig('DB.PG_CONN'), function (err, client, done) {
         if (err) {
