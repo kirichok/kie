@@ -1,0 +1,157 @@
+@mixin clearfix() {
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin decor($background) {
+  background-color: $background;
+}
+
+@mixin text($color) {
+  color: $color;
+}
+
+@mixin no-wrap() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin shadow() {
+  box-shadow: 0 1px 4px $brand-default-hue;
+}
+
+@mixin text-overflow() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin mix-default() {
+  background-color: $brand-default;
+    border: 1px solid $brand-default-hue !important;
+  color: $text-dark;
+    line-height: 46px;
+
+  &:hover, &.hovered {
+    background-color: $brand-default-hue;
+  }
+
+  &:active, &.active {
+    background-color: $brand-default;
+    box-shadow: inset 0 4px 1px $brand-default-hue;
+  }
+
+  &[disabled]:hover {
+    background-color: $brand-default;
+  }
+}
+
+@mixin mix-primary() {
+  background-color: $brand-primary;
+
+  &:hover, &.hovered {
+    background-color: $brand-primary-hue;
+  }
+
+  &:active, &.active {
+    background-color: $brand-primary;
+    box-shadow: inset 0 4px 1px $brand-primary-hue;
+  }
+
+  &[disabled]:hover {
+    background-color: $brand-primary;
+  }
+}
+
+@mixin mix-success() {
+  background-color: $brand-success;
+
+  &:hover, &.hovered {
+    background-color: $brand-success-hue;
+  }
+
+  &:active, &.active {
+    background-color: $brand-success;
+    box-shadow: inset 0 4px 1px $brand-success-hue;
+  }
+
+  &[disabled]:hover {
+    background-color: $brand-success;
+  }
+}
+
+@mixin mix-info() {
+  background-color: $brand-info;
+
+  &:hover, &.hovered {
+    background-color: $brand-info-hue;
+  }
+
+  &:active, &.active {
+    background-color: $brand-info-hue;
+    box-shadow: inset 0 4px 1px darken($brand-info-hue, 20%);
+  }
+
+  &[disabled]:hover {
+    background-color: $brand-info;
+  }
+}
+
+@mixin mix-warning() {
+  background-color: $brand-warning;
+
+  &:hover, &.hovered {
+    background-color: $brand-warning-hue;
+  }
+
+  &:active, &.active {
+    background-color: $brand-warning;
+    box-shadow: inset 0 4px 1px $brand-warning-hue;
+  }
+
+  &[disabled]:hover {
+    background-color: $brand-warning;
+  }
+}
+
+@mixin mix-danger() {
+  background-color: $brand-danger;
+
+  &:hover, &.hovered {
+    background-color: $brand-danger-hue;
+    color: $text-light;
+  }
+
+  &:active, &.active {
+    background-color: $brand-danger;
+    box-shadow: inset 0 4px 1px $brand-danger-hue;
+  }
+
+  &[disabled]:hover {
+    background-color: $brand-danger;
+  }
+}
+
+@mixin t-bg() {
+  @include transition(background, 0.25s, $bezie-1);
+}
+
+@mixin t-width() {
+  @include transition(width, 0.25s, $bezie-1);
+}
+
+@mixin t-bg-color() {
+  @include transition(background, color, 0.25s, $bezie-1);
+}
+
+@mixin t-bg-width() {
+  @include transition(background, width, 0.25s, $bezie-1);
+}
+
+@mixin t($property) {
+  @include transition($property, 0.25s, $bezie-2);
+}

@@ -1,0 +1,143 @@
+.message {
+
+  .message-content {
+    z-index: 500;
+    position: absolute;
+    top: 90px;
+    right: -90px;
+    width: 416px;
+    background: $brand-default;
+    padding: 8px 0 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    @include translate(0, -200%);
+    @include transition(transform, 0.3s, $bezie-1);
+
+    @media(max-width: 768px) {
+      width: 300px;
+      right: -55px;
+      top: 64px;
+    }
+
+    &.active {
+      @include translate(0, 0);
+      .unit{
+        @include translate(0, 0);
+      }
+    }
+
+    .check-ok{
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      color: #a6d785;
+      @include translate(-50%, -50%);
+      display: none;
+      i{
+        font-size: 180px;
+        margin-bottom: 20px;
+      }
+      span{
+        font-size: 32px;
+        font-weight: 100;
+        color: $text-dark;
+      }
+    }
+
+    .percent {
+      margin: 0 20px 14px;
+      position: relative;
+      border-bottom: 2px solid $brand-default-hue;
+      color: $text-dark;
+      font-size: 14px;
+      line-height: 42px;
+
+      &:after {
+        content: '';
+        clear: both;
+        display: table;
+      }
+
+      .percent-title {
+        float: left;
+      }
+
+      .percent-mark {
+        float: right;
+      }
+
+      .percent-value {
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        height: 2px;
+
+        &.color-1 {
+          background-color: $brand-primary;
+        }
+
+        &.color-2 {
+          background-color: $brand-info;
+        }
+      }
+    }
+
+    .unit {
+      min-height: 86px;
+      display: block;
+      padding: 24px 0 14px 100px;
+      position: relative;
+      color: $text-dark;
+      font-size: 14px;
+      line-height: 18px;
+      background: $brand-default;
+      &:nth-child(4){
+        animation-delay: 0.1s;
+      }
+      &:nth-child(5){
+        animation-delay: 0.2s;
+      }
+      &:nth-child(6){
+        animation-delay: 0.3s;
+      }
+
+      *[class*='icon-'] {
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 12px;
+        left: 20px;
+        border-radius: 50%;
+        background-color: $brand-primary;
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: $brand-primary;
+        color: $text-light;
+
+        *[class*='icon-'] {
+          background-color: $brand-info;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    .clear-all {
+      display: block;
+      height: 52px;
+      color: $text-light;
+      font-size: 14px;
+      line-height: 52px;
+      text-transform: uppercase;
+      text-indent: 20px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

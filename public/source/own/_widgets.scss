@@ -1,0 +1,887 @@
+/*.panel-controls {
+  border-top: 12px solid $brand-primary;
+  background: $brand-info;
+  overflow: hidden;
+
+  a {
+    font-size: 20px;
+    line-height: 80px;
+    color: $text-light;
+    display: block;
+    float: left;
+    text-align: center;
+    width: (100% / 6);
+    cursor: pointer;
+    background-color: transparent;
+    @include transition(background-color, 0.3s, ease);
+
+    @include media('lg') {
+      width: (100% / 3);
+    }
+
+    @include media('sm') {
+      width: (100% / 2);
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+    }
+
+    &.link-1:after {
+      background: url('../img/icon-61.png') no-repeat 0 50%;
+      height: 20px;
+      width: 20px;
+      margin: 0 0 -2px 4px;
+    }
+
+    &.link-2:after {
+      background: url('../img/icon-62.png') no-repeat 0 50%;
+      height: 21px;
+      width: 21px;
+      margin: 0 0 -3px 4px;
+    }
+
+    &.link-3:after {
+      background: url('../img/icon-63.png') no-repeat 0 50%;
+      height: 22px;
+      width: 22px;
+      margin: 0 0 -3px 4px;
+    }
+
+    &.link-4:after {
+      background: url('../img/icon-64.png') no-repeat 0 50%;
+      height: 22px;
+      width: 26px;
+      margin: 0 0 -3px 4px;
+    }
+
+    &.link-5:after {
+      background: url('../img/icon-65.png') no-repeat 0 50%;
+      height: 22px;
+      width: 20px;
+      margin: 0 0 -3px 4px;
+    }
+
+    &.link-6:after {
+      background: url('../img/icon-66.png') no-repeat 0 50%;
+      height: 32px;
+      width: 37px;
+      margin: 0 0 -6px 4px;
+    }
+
+    &:hover {
+      color: $text-light;
+      text-decoration: none;
+      background-color: $brand-primary;
+    }
+  }
+}*/
+
+/*.album {
+  position: relative;
+  padding: 0 0 0 50px;
+  background: $brand-info;
+
+  &-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: $brand-primary-hue;
+
+    a {
+      display: block;
+      height: (100%/5);
+      background: 50% 50% no-repeat transparent;
+      text-indent: 60px;
+      @include no-wrap();
+      @include t(background);
+
+      &:hover {
+        background-color: $brand-info;
+      }
+
+      &.link-1 {
+        background-image: url('../img/icon-67.png');
+      }
+
+      &.link-2 {
+        background-image: url('../img/icon-63.png');
+      }
+
+      &.link-3 {
+        background-image: url('../img/icon-68.png');
+      }
+
+      &.link-4 {
+        background-image: url('../img/icon-69.png');
+      }
+
+      &.link-5 {
+        background-image: url('../img/icon-70.png');
+      }
+    }
+  }
+
+  &-body {
+    overflow: hidden;
+
+    .unit {
+      margin: 20px 20px 0;
+      position: relative;
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .btn-option {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        width: 20px;
+        height: 20px;
+        background: url('../img/icon-71.png') no-repeat 50% 50%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-footer {
+    height: 44px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 44px;
+    color: $text-light;
+
+    .prev, .next {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    .prev {
+      background: url('../img/icon-72.png') no-repeat 50% 50%;
+      margin: 0 20px 0 0;
+    }
+
+    .next {
+      background: url('../img/icon-73.png') no-repeat 50% 50%;
+      margin: 0 0 0 20px;
+    }
+  }
+}*/
+
+/*.weather {
+  white-space: nowrap;
+  color: $text-light;
+
+  &-day {
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+
+  &-date {
+    font-size: 16px;
+  }
+
+  &-degree {
+    font-size: 60px;
+    line-height: 96px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &-icon {
+    width: 80px;
+    height: 80px;
+    vertical-align: top;
+  }
+
+  &-location {
+    font-size: 16px;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 16px;
+      margin: 0 0 0 4px;
+      background: url('../img/icon-52.png') no-repeat 50% 50%;
+      @include transform-origin(50%, 0, 0);
+      @include transform(scale(0.65));
+    }
+  }
+
+  &-icon-name {
+    font-size: 16px;
+  }
+
+  &.view-1 {
+
+    .weather-day {
+      float: left;
+      width: 25%;
+      text-align: right;
+      padding: 10px 0 0;
+    }
+
+    .weather-date {
+      float: left;
+      width: 25%;
+      clear: both;
+      text-align: right;
+    }
+
+    .weather-degree {
+      width: 28%;
+      padding: 0 0 0 2%;
+      margin: 0 5% 0 0;
+      text-align: left;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 50%;
+        top: 25%;
+        right: 0;
+        width: 1px;
+        background: $brand-default;
+      }
+    }
+
+    .weather-icon {
+      margin-left: 1%;
+    }
+  }
+
+  &.view-2 {
+
+    .weather-icon {
+      margin-left: calc(35% - 100px);
+    }
+
+    .weather-degree {
+      width: 30%;
+      text-align: center;
+    }
+
+    .weather-location {
+      float: right;
+      width: 38%;
+      margin: 28px 0 0;
+    }
+
+    .weather-icon-name {
+      float: right;
+      width: 38%;
+      clear: both;
+    }
+  }
+}*/
+
+/*.team {
+
+  &-body {
+    width: 100%;
+    overflow: hidden;
+
+    .list {
+      overflow: hidden;
+      float: left;
+
+
+      img {
+        display: block;
+        float: left;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        margin: 20px calc((33% - 64px)/2);
+      }
+    }
+  }
+}*/
+
+
+
+/*.fashion {
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  &-img {
+    width: auto;
+    height: auto;
+  }
+
+  &-name {
+    position: absolute;
+    left: 20px;
+    bottom: 56px;
+  }
+
+  &-brand {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+
+  &-price {
+    position: absolute;
+    right: 20px;
+    bottom: 56px;
+  }
+
+  &-raiting {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 85px;
+    height: 18px;
+    background: url('../img/icon-75.png') repeat-x 100% 50%;
+
+    span {
+      display: block;
+      height: 100%;
+      background: $brand-primary;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}*/
+
+/*.time {
+  position: relative;
+  color: $text-light;
+
+  &-icon {
+    position: absolute;
+    top: 36px;
+    left: 20%;
+    margin-left: -30px;
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ffffff;
+    border-radius: 50%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      bottom: 18px;
+      width: 18px;
+      height: 24px;
+      border: 6px solid #ffffff;
+      border-top: none;
+      border-left: none;
+    }
+  }
+
+  &-hour {
+    padding: 0 0 0 40%;
+    font-size: 58px;
+    line-height: 64px;
+  }
+
+  &-date {
+    padding: 0 0 0 40%;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &-description {
+    display: block;
+    padding: 28px 0 0;
+    font-size: 16px;
+    line-height: 26px;
+    max-height: 80px;
+    overflow: hidden;
+    margin: 0;
+  }
+}*/
+
+/*.chart-mini {
+
+  &-1 {
+
+    .chart-body {
+      margin: 0 auto;
+      width: 148px;
+      height: 148px;
+      text-align: center;
+      font-size: 30px;
+      line-height: 148px;
+      color: $text-light;
+    }
+
+    canvas {
+      display: block;
+      margin-top: -100%;
+    }
+
+    .legend {
+      text-align: center;
+
+      span {
+        display: inline-block;
+        background: $brand-primary;
+        font-size: 12px;
+        line-height: 54px;
+        width: 54px;
+        height: 54px;
+        color: $text-light;
+        margin: 0 -5px 0 0;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 1px;
+          height: 26px;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          margin: -13px 0 0;
+          background: #ffffff;
+        }
+
+        &:first-child:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-2 {
+
+    .chart-body {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .legend {
+      overflow: hidden;
+      color: $text-light;
+      font-size: 16px;
+      line-height: 26px;
+
+      .field {
+        float: left;
+        clear: both;
+        padding: 10px 0 0;
+      }
+
+      .value {
+        float: right;
+        padding: 10px 0 0;
+      }
+    }
+  }
+
+  &-3 {
+    .chart-body {
+      display: block;
+      margin: 0 -1%;
+      width: 102%;
+      height: 100px;
+    }
+  }
+
+  &-4 {
+    .chart-body {
+      display: block;
+      width: 100%;
+      height: 100px;
+    }
+  }
+
+  &-5 {
+    overflow: hidden;
+
+    .chart-body {
+      display: block;
+      margin: 0 -5px -5px;
+      width: calc(100% + 10px);
+      height: 100px;
+    }
+  }
+
+  .legend-top {
+    color: $text-light;
+    line-height: 24px;
+
+    .name {
+      font-size: 20px;
+    }
+
+    .value {
+      font-size: 24px;
+    }
+
+    .description {
+      font-size: 16px;
+    }
+  }
+}*/
+
+/*.downloading {
+  h6 {
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 14px;
+      background: url('../img/icon-84.png') no-repeat 0 0;
+      margin: 0 0 0 4px;
+    }
+  }
+
+  .scale {
+    border:1px solid $brand-success;
+    height: 12px;
+    border-radius: 6px;
+    position: relative;
+    margin: 10px 0;
+
+    span {
+      content: '';
+      display: block;
+      height: 100%;
+      background: $brand-success;
+      border-radius: 6px;
+    }
+
+    &:after {
+      content: attr(data-scale);
+      display: block;
+      position: absolute;
+      top: -36px;
+      right: 0;
+      font-size: 16px;
+      line-height: 36px;
+      color: $brand-success;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}*/
+
+/*.developing {
+
+  .field {
+    &-group {
+      overflow: hidden;
+      padding: 40px 20px 0;
+    }
+
+    &-1 {
+      font-size: 48px;
+      line-height: 54px;
+
+      &-sub {
+        font-size: 16px;
+        line-height: 20px;
+        color: $text-dark;
+      }
+
+      &-total {
+        font-size: 68px;
+        line-height: 72px;
+      }
+    }
+
+    &-2 {
+      font-size: 30px;
+      line-height: 36px;
+      text-align: right;
+      padding: 10px 0 0;
+
+      &-sub {
+        font-size: 14px;
+        line-height: 18px;
+        color: $text-dark;
+      }
+    }
+  }
+
+  .delta {
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin: 0 4px 0 0;
+    }
+
+    &.up {
+      &:before {
+        background-position: 0 0;
+      }
+    }
+
+    &.down {
+      &:before {
+        background-position: 0 -100%;
+      }
+    }
+  }
+
+  .color-info .delta:before {
+    background-image: url('../img/icon-88.png');
+  }
+
+  .color-warning .delta:before {
+    background-image: url('../img/icon-86.png');
+  }
+
+  .color-success .delta:before {
+    background-image: url('../img/icon-87.png');
+  }
+
+  .color-primary .delta:before {
+    background-image: url('../img/icon-85.png');
+  }
+}*/
+
+/*.inform {
+  padding: 10px;
+  min-height: 80px;
+  position: relative;
+
+  &-view {
+    &-1 {
+      padding-left: 80px;
+    }
+
+    &-2 {
+      color: $text-light;
+    }
+  }
+
+  &:before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+  }
+
+  &-1 {
+    &:before {
+      background: url('../img/icon-91.png') no-repeat 50% 50% #00b8f2;
+    }
+  }
+
+  &-2 {
+    &:before {
+      background: url('../img/icon-92.png') no-repeat 50% 50% $brand-success;
+    }
+  }
+
+  &-3 {
+    &:before {
+      background: url('../img/icon-93.png') no-repeat 50% 50% $brand-warning;
+    }
+  }
+
+  &-4 {
+    &:before {
+      background: url('../img/icon-94.png') no-repeat 50% 50% $brand-primary;
+    }
+  }
+
+  &-value {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    @include no-wrap();
+  }
+
+  &-name {
+    font-size: 14px;
+    line-height: 18px;
+    @include no-wrap();
+  }
+
+  &-canvas {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .informs & {
+    width: calc(50% - 10px);
+    margin: 0 20px 20px 0;
+    float: left;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(5),
+    &:nth-child(6){
+      margin-bottom: 0;
+    }
+  }
+}*/
+
+/*.visitors {
+
+  &-map {
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+
+  &-stat {
+
+    h6 {
+      margin: 20px 0;
+    }
+
+    .unit {
+      position: relative;
+      padding: 10px 0 0;
+      margin: 0 20px 0 0;
+
+      .scale {
+        margin: 10px 48px 12px 0;
+        position: relative;
+        background: $brand-primary-hue;
+        border-radius: 3px;
+
+        span {
+          display: block;
+          height: 6px;
+          border-radius: 3px;
+          background: #ffffff;
+          position: relative;
+        }
+
+        div {
+          position: absolute;
+          right: -48px;
+          top: -12px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}*/
+
+/*#map {
+  min-height: 400px;
+}*/
+
+
+/* Peppermint minimal required styles */
+
+/*.peppermint.peppermint-active {
+    position: relative;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.peppermint.peppermint-active .peppermint-slides {
+    position: relative;
+    overflow: hidden; !* clearfix *!
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+}
+
+.peppermint.peppermint-active .peppermint-slides > * {
+    float: left;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+
+.peppermint.peppermint-active .peppermint-slides a:active,
+.peppermint.peppermint-active .peppermint-slides a:active img {
+    outline: none;
+}
+
+.peppermint.peppermint-active,
+.peppermint.peppermint-active .peppermint-dots,
+.peppermint.peppermint-active .peppermint-slides,
+.peppermint.peppermint-active .peppermint-slides > * {
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.peppermint.peppermint-mouse .peppermint-slides {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+}
+
+.peppermint.peppermint-mouse.peppermint-drag .peppermint-slides * {
+    cursor: move;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: grabbing;
+}
+
+.peppermint-dots{
+  text-align: center;
+  li {
+    display: inline-block;
+    outline: none;
+    span{
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $brand-primary;
+      margin: 0 3px;
+      cursor: pointer;
+    }
+    &.peppermint-active-dot span{
+      background: $brand-info;
+    }
+  }
+}*/

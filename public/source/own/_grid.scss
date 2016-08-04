@@ -1,0 +1,279 @@
+.row {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+div[class^=col-] {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  @media (max-width: 480px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+div[class^=decor] {
+  padding: 10px;
+  min-height: 100px;
+}
+
+.aside {
+  width: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 400;
+  background-color: $brand-info;
+  @media (max-width: 768px) {
+    width: 64px;
+  }
+
+  .btn-logo {
+    display: block;
+    height: 90px;
+    position: relative;
+    background: url('../img/header.png') 0 0 $brand-primary-hue;
+    @media (max-width: 768px) {
+      height: 64px;
+      background-position: 6% 10%;
+    }
+  }
+
+  /*.btn-profile {
+    display: block;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top:50%;
+      right:50%;
+      margin: -15px -15px 0 0;
+      background: url('../img/icon-account.svg') 0 0;
+      @include background-size(cover);
+    }
+  }*/
+}
+
+.wrap-content {
+  padding: 0 0 50px 90px;
+  position: relative;
+  background: #ececec;
+  min-height: 100%;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    padding-left: 64px;
+  }
+  .header {
+    background-color: $brand-primary;
+    height: 90px;
+    z-index: 300;
+    @media (max-width: 768px) {
+      height: 64px;
+    }
+
+    > .unit {
+      position: absolute;
+
+      &.title {
+        color: $text-light;
+        padding: 20px 0 0 20px;
+        max-width: calc(100% - 990px);
+
+        @include media('lg') {
+          max-width: calc(100% - 590px);
+        }
+
+        @include media('sm') {
+          display: none;
+        }
+
+
+        .primary, .secondary {
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      &.morphsearch {
+        z-index: 400;
+        position: absolute;
+        top: 15px;
+        right: 290px;
+        width: 450px;
+
+        @include media('lg') {
+          width: 60px;
+          background: $brand-primary;
+        }
+
+        @include media('sm') {
+          right: 270px;
+        }
+
+         @media(max-width: 768px) {
+          width: 64px;
+          height: 64px;
+          right: 192px;
+          top: 0;
+        }
+
+      }
+
+
+
+      &.email {
+        top: 0;
+        right: 180px;
+        width: 90px;
+        height: 90px;
+        @media(max-width: 768px) {
+          right: 128px;
+          width: 64px;
+          height: 64px;
+        }
+      }
+
+      &.message {
+        position: absolute;
+        top: 0;
+        right: 90px;
+        width: 90px;
+        height: 90px;
+        @media(max-width: 768px) {
+          right: 64px;
+          width: 64px;
+          height: 64px;
+        }
+      }
+
+      &.backet {
+        top: 0;
+        right: 0;
+        width: 100%;
+//				font-family: $raleway;
+      }
+    }
+  }
+
+  .content {
+    padding: $grid-padding ($grid-padding * 1.25) 0;
+    @media(max-width: 480px) {
+      padding: $grid-padding ($grid-padding + 5) 0;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 $grid-padding 1px (90px + $grid-padding);
+    border-top: 1px solid $brand-info;
+    height: 49px;
+    font-size: 14px;
+    line-height: 48px;
+    color: $text-dark;
+    text-indent: 9px;
+  }
+}
+
+.wrap-menu {
+
+}
+
+.overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 500;
+  cursor: pointer;
+  @include transition(opacity, 0.5s, easy);
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.toggle-fixed {
+  color: #fff;
+  cursor: pointer;
+  font-size: 36px;
+  width: 90px;
+  margin-bottom: 30px;
+  display: inline-block;
+  text-align: center;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 0;
+  &.active{
+    opacity: 1;
+  }
+  @media(max-width: 768px) {
+    width: 64px;
+  }
+   @media(max-width: 497px) {
+    display: none;
+  }
+}
+
+.fixed{
+  &.mobile-view .aside{
+    position: fixed;
+  }
+  .header{
+    position: fixed;
+    width: calc(100% - 90px);
+    top: 0;
+    @media(max-width: 768px) {
+      width: calc(100% - 64px);
+    }
+    @media(max-width: 497px) {
+      width: 100%;
+    }
+  }
+  .wrap-content .content{
+    margin-top: 90px;
+    @media(max-width: 768px) {
+      margin-top: 64px;
+    }
+  }
+  .filter .cd-main-content.is-fixed .cd-tab-filter-wrapper{
+    top: 90px;
+    @media(max-width: 768px) {
+      top: 64px;
+    }
+  }
+}
+
+
+
+/*
+.grids .row [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+.grids .nesting [class^=col-] {
+    background: #d3dde0;
+    border: 1px solid #cbd3d5;
+}
+*/

@@ -1,0 +1,43 @@
+$support-min-width: 320px;
+
+$breakpoints: (
+  'xs': (max-width: $support-min-width),
+  'sm': (max-width: 768px),
+  'md': (max-width: 992px),
+  'lg': (max-width: 1200px)
+);
+
+@mixin media($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @error 'Incorrect `#{$breakpoint}`. ';
+  }
+}
+
+$bezie-1: cubic-bezier(0.4, 1, 0.3, 1);
+//$bezie-2: cubic-bezier(0,.42,.4,1.21);
+
+$font-family-sans-serif:  'Raleway', sans-serif !default;
+//$font-family-serif:       'Roboto', sans-serif !default;
+
+
+$brand-default:           #ffffff;
+$brand-default-hue:       #d8d8d8;
+$brand-primary:           #7266ba;
+$brand-primary-hue:       #585b9c;
+$brand-success:           #46be8a;
+$brand-success-hue: 	  #41b181;
+$brand-info:              #39bee8;
+$brand-info-hue:          #34aed4;
+$brand-warning:           #f2a654;
+$brand-warning-hue:       #e39c4f;
+$brand-danger:            #ff69b4;
+$brand-danger-hue:        #e25da0;
+
+$text-light:      		  #ffffff;
+$text-dark:      		  #333333;
+
+$grid-padding: 			  20px;
