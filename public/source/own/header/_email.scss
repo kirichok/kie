@@ -1,0 +1,83 @@
+.email {
+
+  .btn-email {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mail-content {
+    z-index: 500;
+    position: absolute;
+    top: 90px;
+    right: -180px;
+    width: 416px;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    @include translate(0, -200%);
+    @include transition(transform, 0.3s, $bezie-1);
+
+    @media(max-width: 768px) {
+      width: 300px;
+      right: -120px;
+      top: 64px;
+    }
+
+    &.active {
+      @include translate(0, 0);
+    }
+
+    .unit {
+      min-height: 86px;
+      display: block;
+      padding: 24px 0 14px 100px;
+      position: relative;
+      color: #333333;
+      font-size: 14px;
+      line-height: 18px;
+      background: #ffffff;
+      @include transition(background, 0.3s, $bezie-1);
+
+      img {
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 12px;
+        left: 20px;
+        border-radius: 50%;
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: $brand-primary;
+        color: $text-light;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    .show-all {
+      display: block;
+      height: 52px;
+      border-right: none;
+      color: $text-light;
+      font-size: 14px;
+      line-height: 52px;
+      text-transform: uppercase;
+      text-indent: 20px;
+      position: relative;
+
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

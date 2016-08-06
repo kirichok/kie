@@ -1,0 +1,136 @@
+.b-profile {
+  padding-bottom: $grid-padding;
+  color: $text-light;
+
+  &-avatar {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 20px auto;
+    border-radius: 50%;
+  }
+
+  &-name {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &-profession {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    margin: 6px 0 12px;
+  }
+
+  &-share {
+    display: block;
+    text-align: center;
+    padding: 12px 0 24px;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 8px;
+      overflow: hidden;
+
+      a, a:hover {
+        font-size: 24px;
+        color: #fff;
+      }
+    }
+  }
+
+  &-follow {
+    height: 75px;
+    border-top: 1px solid $brand-default;
+    border-bottom: 1px solid $brand-default;
+    margin: 20px 0 0;
+
+    .unit {
+      width: 50%;
+      height: 100%;
+
+      &:first-child {
+        border-right: 1px solid $brand-default;
+        float: left;
+      }
+
+      &:last-child {
+        float: right;
+      }
+
+      span {
+        display: block;
+        text-align: center;
+        color: $text-light;
+
+        &:first-child {
+          font-size: 40px;
+          line-height: 42px;
+        }
+        &:last-child {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &-folders {
+
+    a {
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 14px 0 11px;
+      border-bottom: 1px solid $brand-default;
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-about {
+
+    h6 {
+      font-size: 16px;
+      padding: 6px 0 12px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &-labels {
+    padding: 12px 0;
+
+    h6 {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: bold;
+      margin: 0 0 20px;
+    }
+
+    .label {
+      display: block;
+      margin: 0 0 20px;
+    }
+  }
+
+  .btn-follow-this {
+    font-size: 16px;
+    line-height: 34px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 0 40px;
+    text-transform: uppercase;
+    display: inline-block;
+    cursor: pointer;
+  }
+}

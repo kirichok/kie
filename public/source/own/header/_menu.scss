@@ -1,0 +1,380 @@
+.wrap-content {
+  @include transition(transform 0.4s);
+
+  &.menu-active {
+    @include scale(0.9);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+
+    @include media('md') {
+      display: none;
+    }
+  }
+}
+
+.wrap-menu {
+  background: $brand-primary-hue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  min-height: 100%;
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 800px;
+  @include translateX(-100%);
+  @include transition(transform, 0.4s);
+
+  &.active {
+    @include translateX(0);
+  }
+
+  @include media('md') {
+    position: absolute;
+    max-width: none;
+  }
+}
+
+.menu-btn-open {
+  display: block;
+  height: 90px;
+  position: relative;
+  overflow: hidden;
+  text-indent: 100px;
+  cursor: pointer;
+  @media(max-width: 768px) {
+    height: 64px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 32px;
+    top: 32px;
+    height: 6px;
+    margin: 0 0 0 -16px;
+    border-top: 6px solid $text-light;
+    border-bottom: 6px solid $text-light;
+    padding: 4px 0;
+    background-color: $text-light;
+    @include background-clip(content-box);
+    @include box-sizing(content-box);
+    @media(max-width: 768px) {
+      top: 19px;
+    }
+  }
+}
+
+.menu-btn-close {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  cursor: pointer;
+  width: 200px;
+  height: 160px;
+  stroke: $text-light;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    stroke: $text-light;
+    stroke-width: 6px;
+    margin: -14px 0 0 -14px;
+    @include transform-origin(50%, 50%);
+    @include scale(1);
+    @include transition(transform, stroke, 0.3s, ease-in);
+  }
+  @include media('md') {
+    width: 90px;
+    height: 90px;
+  }
+
+  &:hover {
+    svg {
+      @include scale(2);
+    }
+  }
+}
+
+.menu-title {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  padding: 0 0 0 200px;
+  text-align: center;
+  line-height: 160px;
+  font-size: 70px;
+  color: $text-light;
+
+  @include media('md') {
+    font-size: 36px;
+    padding: 0 0 0 60px;
+    line-height: 90px;
+  }
+}
+
+$fade-time: 0.3s;
+
+.menu {
+  overflow: hidden;
+  position: relative;
+
+  li {
+    position: relative;
+    overflow: hidden;
+    width: 25%;
+    height: 193px;
+    float: left;
+    display: block;
+    border-right: 1px solid $brand-primary-hue;
+    border-bottom: 1px solid $brand-primary-hue;
+    background-color: $brand-primary;
+    text-align: center;
+    cursor: pointer;
+
+    @include media('md') {
+      width: 25%;
+    }
+
+    @include media('sm') {
+      width: 50%;
+    }
+
+    &:hover {
+      background-color: $brand-info-hue;
+    }
+
+    a, span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+      color: $text-light;
+      padding: 120px 9px 0;
+      font-size: 20px;
+      line-height: 36px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    i{
+      color: #fff;
+      margin-top: 60px;
+      font-size: 40px;
+    }
+
+    .more{
+      font-size: 14px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      margin-top: 0;
+    }
+
+    .menu {
+      visibility: hidden;
+      cursor: default;
+
+      li {
+        opacity: 0;
+
+        &:first-child {
+          margin-left: 200px;
+
+          @include media('md') {
+            margin-left: 25%;
+          }
+
+          @include media('sm') {
+            margin-left: 50%;
+          }
+        }
+      }
+    }
+
+    &.back {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      text-indent: 250px;
+      display: block !important;
+      visibility: hidden;
+      opacity: 0;
+      @include transition(opacity, $fade-time, ease);
+
+      span {
+        display: none;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        content: '';
+        border: 25px solid transparent;
+        border-right-color: $text-light;
+        position: absolute;
+        top: 75px;
+        right: 50px;
+      }
+    }
+  }
+
+
+
+  &.sub-active {
+
+    > li {
+
+      &:not(.active) {
+        display: none;
+      }
+
+      &.back {
+        //display: block;
+        visibility: visible;
+        opacity: 1;
+        //@include transition(opacity, 0.3s, $bezie-1);
+      }
+
+      &.active {
+        padding-top: 0;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        background-image: none;
+        border: none;
+
+        &:before {
+          display: none;
+        }
+
+        > span, > i {
+          display: none;
+        }
+      }
+
+      .menu {
+        //display: block;
+        visibility: visible;
+//				opacity: 1;
+
+        li {
+          opacity: 1;
+
+
+
+          &:before {
+            display: none;
+          }
+
+          a {
+            padding-top: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.mobile-view{
+  .aside{
+    height:auto;
+    position: absolute;
+    background: $brand-primary-hue;
+    .btn-profile, .btn-logo{
+      display: none;
+    }
+  }
+  .wrap-content {
+    padding: 0 0 50px 0;
+  }
+}
+
+.user-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    color: $text-light;
+    font-size: 28px;
+    background: $brand-info;
+    cursor: pointer;
+    z-index: 450;
+    @media(max-width: 768px) {
+      width: 64px;
+      height: 64px;
+      line-height: 64px;
+    }
+  }
+
+.user-content {
+    z-index: 9999;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 416px;
+    background: $brand-info;
+    color: $text-light;
+    padding: 8px 0 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    @include translate(0, -200%);
+    @include transition(transform, 0.3s, $bezie-1);
+
+    @media(max-width: 768px) {
+      width: 300px;
+//      right: -55px;
+      top: 64px;
+    }
+
+    &.active {
+      @include translate(0, 0);
+      .unit{
+        @include translate(0, 0);
+      }
+    }
+  .b-profile-folders{
+    padding: 0 20px;
+  }
+  .view-profile {
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-indent: 20px;
+  }
+}
+
+.notification-count{
+  position: absolute;
+  background: $brand-info;
+  color: $text-light;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  top: 20px;
+  right: 20px;
+  @media(max-width: 768px){
+    top: 8px;
+    right: 8px;
+  }
+}

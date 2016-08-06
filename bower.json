@@ -1,0 +1,28 @@
+{
+  "name": "kie",
+  "description": "",
+  "main": "",
+  "authors": [
+    "kirichok <evgeniy.kirichok@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/kirichok/kie",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ui-contextmenu": "^1.12.0",
+    "jquery": "~2.1.4",
+    "jquery-validation": "^1.15.1",
+    "blueimp-file-upload": "^9.12.5",
+    "jquery.nicescroll": "3.5.6",
+    "modernizr": "^3.3.1",
+    "font-awesome": "^4.6.3",
+    "bootstrap": "3.3.6"
+  }
+}
