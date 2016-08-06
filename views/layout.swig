@@ -7,9 +7,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>{{ title }}</title>
 
-    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
-    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--<link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/vendors/sweetalert.css">
     <!--<link rel="stylesheet" href="css/vendors/loading.css">-->
@@ -33,15 +35,16 @@
 {% block content %}
 {% endblock %}
 
-<script src="vendors/jquery/dist/jquery.min.js"></script>
-<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--<script src="vendors/jquery/dist/jquery.min.js"></script>-->
+<!--<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>-->
 <!--<script src="vendors/jquery.nicescroll/jquery.nicescroll.min.js"></script>-->
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<!--<script src="js/bootstrap.min.js"></script>-->
+<script src="js/bootstrap.min.js"></script>
+
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/classie.js"></script>
 <script src="js/ui.js"></script>
