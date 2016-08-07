@@ -7,35 +7,42 @@ router.get('/', function (req, res, next) {
         {
             name: 'Навчання',
             icon: 'fa-globe',
+            alias: 'study',
             subitems: [
                 {
                     name: 'Загальне',
                     icon: 'fa-desktop',
+                    alias: 'general',
                     href: '#'
                 },
                 {
                     name: 'Бібліотека',
                     icon: 'fa-laptop',
+                    alias: 'library',
                     href: '#'
                 },
                 {
                     name: 'Новини',
                     icon: 'fa-laptop',
+                    alias: 'news',
                     href: '#'
                 },
                 {
                     name: 'Ресурси',
                     icon: 'fa-laptop',
+                    alias: 'resource',
                     href: '#'
                 },
                 {
                     name: 'Моя успішність',
                     icon: 'fa-laptop',
+                    alias: 'my_study',
                     href: '#'
                 },
                 {
                     name: 'Допомога',
                     icon: 'fa-laptop',
+                    alias: 'help',
                     href: '#'
                 }
             ]
@@ -50,28 +57,30 @@ router.get('/', function (req, res, next) {
             name: 'Поїсти',
             icon: 'fa-th',
             href: '#',
-            alias: 'item1'
+            alias: 'eat'
         },
         {
             name: 'Культурні програми',
             icon: 'fa-th',
             href: '#',
-            alias: 'item1'
+            alias: 'cultural'
         },
         {
             name: 'Спорт',
             icon: 'fa-th',
             href: '#',
-            alias: 'item1'
+            alias: 'sport'
         },
         {
             name: 'Робота',
             icon: 'fa-th',
+            alias: 'work',
             subitems: [
                 {
                     name: 'Виконання робіт по навчанню',
                     icon: 'fa-desktop',
-                    href: '#'
+                    href: '#',
+                    alias: 'help_student'
                 }
             ]
         }
