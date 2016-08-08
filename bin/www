@@ -10,7 +10,7 @@ var http = require('http');
 
 var common = require('../helpers/common'),
     wss = require('../helpers/wss'),
-    db = require('../helpers/db'),
+    //db = require('../helpers/db'),
     logger = require('../helpers/logger');
 
 
@@ -95,10 +95,10 @@ function onListening() {
     debug('Listening on ' + bind);
 
     logger.log('Listening on ' + bind);
-    db.db_init(function (res, err) {
+    /*db.db_init(function (res, err) {
         if (err) {
             return;
         }
         wss.wss_init(server);
-    });
+    });*/
 }

@@ -1,7 +1,7 @@
 {% extends 'layout.swig' %}
 
 {% block content %}
-{% include 'layout_main_menu.swig' %}
+<!--{% include 'layout_main_menu.swig' %}-->
 
 <div id="wrap-content" class="wrap-content">
     <div class="preloader">
@@ -337,9 +337,9 @@
 <div id="overlay" class="overlay"></div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28 28" style="display: none;" xml:space="preserve">
-			<g id="icon-close">
-				<line x1="2" y1="2" x2="26" y2="26" />
-				<line x1="2" y1="26" x2="26" y2="2" />
-			</g>
+    <g id="icon-close">
+	    <line x1="2" y1="2" x2="26" y2="26" />
+		<line x1="2" y1="26" x2="26" y2="2" />
+	</g>
 </svg>
 {% endblock %}
