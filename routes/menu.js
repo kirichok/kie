@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.post('/', function (req, res, next) {
     var menu = [
         {
             name: 'Навчання',
@@ -86,7 +86,7 @@ router.get('/', function (req, res, next) {
         }
     ];
 
-    res.render('ui', {title: 'Hello !!!', current_item: '', menu: menu});
+    res.render('layout_main_menu', {current_item: '', menu: menu});
 });
 
 module.exports = router;

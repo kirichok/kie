@@ -10,7 +10,7 @@
             <span>Back</span>
         </li>
         {% for item in menu %}
-        <li>
+        <li alias="{{ item.alias }}">
             {% if item.subitems %}
             <i class="fa fa-bars more"></i>
             <i class="fa {{ item.icon }}"></i>
