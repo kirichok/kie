@@ -1,7 +1,7 @@
 {% extends 'layout.swig' %}
 
 {% block content %}
-{% include 'layout_main_menu.swig' %}
+<!--{% include 'layout_main_menu.swig' %}-->
 
 <div id="wrap-content" class="wrap-content">
     <div class="preloader">
