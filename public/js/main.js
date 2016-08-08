@@ -6,7 +6,7 @@ $(function () {
 
 
     $.ajax({
-        url: 'http://localhost:3123/menu',
+        url: 'http://localhost:3000/menu',
         type: 'POST',
         jsonpCallback: 'callback', // this is not relevant to the POST anymore
         success: function (data) {
