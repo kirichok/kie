@@ -1,4 +1,9 @@
-<div id="wrap-menu" class="wrap-menu">
+<div class="aside">
+    <a href="index.html" class="btn-logo"></a>
+    <span class="menu-btn-open" id="menu-btn-open">Menu</span>
+    <span class="toggle-fixed fa fa-thumb-tack" data-toggle="tooltip" data-placement="top" title="Fixed top"></span>
+</div>
+<nav id="wrap-menu" class="wrap-menu">
 	<span id="menu-btn-close" class="menu-btn-close">
 		<svg>
             <use xlink:href="#icon-close"></use>
@@ -10,7 +15,7 @@
             <span>Back</span>
         </li>
         {% for item in menu %}
-        <li>
+        <li alias="{{ item.alias }}">
             {% if item.subitems %}
             <i class="fa fa-bars more"></i>
             <i class="fa {{ item.icon }}"></i>
@@ -27,4 +32,4 @@
         </li>
         {% endfor %}
     </ul>
-</div>
+</nav>
