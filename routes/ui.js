@@ -86,7 +86,7 @@ router.get('/', function (req, res, next) {
         }
     ];
 
-    res.render('ui', {title: 'Hello !!!', current_item: '', menu: menu});
+    res.render('test', {title: 'Hello !!!', current_item: '', menu: menu});
 });
 
 module.exports = router;

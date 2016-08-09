@@ -1,3 +1,8 @@
+<div class="aside">
+    <a href="index.html" class="btn-logo"></a>
+    <span class="menu-btn-open" id="menu-btn-open">Menu</span>
+    <span class="toggle-fixed fa fa-thumb-tack" data-toggle="tooltip" data-placement="top" title="Fixed top"></span>
+</div>
 <nav id="wrap-menu" class="wrap-menu">
 	<span id="menu-btn-close" class="menu-btn-close">
 		<svg>
