@@ -1,19 +1,13 @@
 {% extends 'layout.swig' %}
 
 {% block content %}
-<!--{% include 'layout_main_menu.swig' %}-->
 
+<div class="preloader">
+    <!--<div class="preloader-anim la-animate"></div>-->
+    <div class="loading-anim">Loading</div>
+</div>
 <div id="wrap-content" class="wrap-content">
-    <div class="preloader">
-        <!--<div class="preloader-anim la-animate"></div>-->
-        <div class="loading-anim">Loading</div>
-    </div>
-    <div class="aside">
-        <a href="index.html" class="btn-logo"></a>
-        <span class="menu-btn-open" id="menu-btn-open">Menu</span>
-        <span class="toggle-fixed fa fa-thumb-tack" data-toggle="tooltip" data-placement="top" title="Fixed top"></span>
-    </div>
-    <div class="header">
+    <header class="header">
         <div class="unit title">
             <h5 class="primary font-weight-700">Dashboard</h5>
             <h6 class="secondary">Dashboard</h6>
@@ -218,8 +212,14 @@
                 <a href="profile.html" class="view-profile btn btn-danger">View profile</a>
             </div>
         </div>
+    </header>
+    <div class="aside">
+        <a href="index.html" class="btn-logo"></a>
+        <span class="menu-btn-open" id="menu-btn-open">Menu</span>
+        <span class="toggle-fixed fa fa-thumb-tack" data-toggle="tooltip" data-placement="top" title="Fixed top"></span>
     </div>
-    <div class="content container-fluid">
+    <!--{% include 'layout_main_menu.swig' %}-->
+    <main class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <ol class="breadcrumb">
@@ -328,13 +328,13 @@
             </div>
         </div>
 
-    </div>
-    <div class="footer">
+    </main>
+    <footer class="footer">
         © 2015 Copyright.
-    </div>
+    </footer>
 </div>
 
-<div id="overlay" class="overlay"></div>
+<!--<div id="overlay" class="overlay"></div>-->
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28 28" style="display: none;" xml:space="preserve">
     <g id="icon-close">

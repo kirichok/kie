@@ -1,4 +1,4 @@
-<div id="wrap-menu" class="wrap-menu">
+<nav id="wrap-menu" class="wrap-menu">
 	<span id="menu-btn-close" class="menu-btn-close">
 		<svg>
             <use xlink:href="#icon-close"></use>
@@ -27,4 +27,4 @@
         </li>
         {% endfor %}
     </ul>
-</div>
+</nav>
