@@ -62,7 +62,7 @@ div[class^=decor] {
   }*/
 }
 
-.wrap-content {
+.wrap-site {
   padding: 0 0 50px 90px;
   position: relative;
   background: #ececec;
@@ -187,7 +187,7 @@ div[class^=decor] {
   }
 }
 
-.wrap-menu {
+.main-menu {
 
 }
 
@@ -247,7 +247,7 @@ div[class^=decor] {
       width: 100%;
     }
   }
-  .wrap-content .content{
+  .wrap-site .content{
     margin-top: 90px;
     @media(max-width: 768px) {
       margin-top: 64px;
