@@ -1,10 +1,10 @@
 function Menu() {
     this.$ = {
         content: {
-            wrap: $('#wrap-content')
+            wrap: $('#wrap-site')
         },
         menu: {
-            wrap: $('#wrap-menu'),
+            wrap: $('#main-menu'),
             container: $('#menu'),
             btn_open: $('#menu-btn-open'),
             btn_close: $('#menu-btn-close'),
@@ -12,9 +12,9 @@ function Menu() {
             span: $('#menu span'),
             li: $('#menu li')
         },
-        overlay: {
+        /*overlay: {
             container: $('#overlay')
-        }
+        }*/
     };
 }
 
@@ -41,9 +41,9 @@ Menu.prototype.init = function () {
         }
     });
 
-    this.$.overlay.container.click(function (e) {
+    /*this.$.overlay.container.click(function (e) {
         self.close();
-    });
+    });*/
 
     this.active('study');
 };
@@ -51,13 +51,13 @@ Menu.prototype.init = function () {
 Menu.prototype.open = function () {
     this.$.content.wrap.addClass('menu-active');
     this.$.menu.wrap.addClass('active');
-    this.$.overlay.container.addClass('active');
+    /*this.$.overlay.container.addClass('active');*/
 };
 
 Menu.prototype.close = function () {
     this.$.content.wrap.removeClass('menu-active');
     this.$.menu.wrap.removeClass('active');
-    this.$.overlay.container.removeClass('active');
+   /* this.$.overlay.container.removeClass('active');*/
 };
 
 Menu.prototype.active = function (alias) {
