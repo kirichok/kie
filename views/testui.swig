@@ -438,7 +438,7 @@
     <div class="preloader-anim la-animate"></div>
     <div class="loading-anim">Loading</div>
 </div>
-<!--<div id="overlay" class="overlay"></div>-->
+<div id="overlay" class="overlay"></div>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28 28" style="display: none;" xml:space="preserve">
 			<g id="icon-close">
@@ -452,7 +452,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-<!--<script src="js/jquery.nicescroll.min.js"></script>-->
+<script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/classie.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/search.js"></script>

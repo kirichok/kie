@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* GET home page. */
 router.get('/', function (req, res, next) {
     var menu = [];
-    for (var i = 0, l = 1000; i < l; i++) {
+    for (var i = 0, l = 900; i < l; i++) {
         menu.push({
             name: 'Item ' + i,
             icon: 'fa-globe',
@@ -20,7 +20,10 @@ router.get('/', function (req, res, next) {
             });
         }
     }
-    res.send(JSON.stringify(menu));
+
+    //console.log(JSON.stringify(menu));
+
+    res.render('testt1', {title: 'Hello !!!', current_item: '', menu: menu});
 });
 
 module.exports = router;

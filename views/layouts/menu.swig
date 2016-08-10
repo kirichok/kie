@@ -14,22 +14,16 @@
         <li id="menu-btn-back" class="back">
             <span>Back</span>
         </li>
-        {% for item in menu -%}
+        {%- for item in menu -%}
         <li alias="{{ item.alias }}">
-            {% if item.subitems -%}
-            <i class="fa fa-bars more"></i>
-            <i class="fa {{ item.icon }}"></i>
-            <span>{{ item.name }}</span>
-            <ul class="menu">
-                {% for subitem in item.subitems -%}
-                <li><i class="fa {{ subitem.icon }}"></i><a href="{{ subitem.href }}">{{ subitem.name }}</a></li>
-                {% endfor -%}
+            {%- if item.subitems -%}
+            <i class="fa fa-bars more"></i><i class="fa {{ item.icon }}"></i><span>{{ item.name }}</span><ul class="menu">
+                {%- for subitem in item.subitems -%}
+                <li alias="{{ subitem.alias }}"><i class="fa {{ subitem.icon }}"></i><a href="{{ subitem.href }}">{{ subitem.name }}</a></li>
+                {%- endfor -%}
             </ul>
-            {% else -%}
-            <i class="fa fa-bars {{ item.icon }}"></i>
-            <a href="{{ item.href }}">{{ item.name }}</a>
-            {% endif -%}
+            {%- else -%}
+            <i class="fa fa-bars {{ item.icon }}"></i><a href="{{ item.href }}">{{ item.name }}</a>
+            {%- endif -%}
         </li>
-        {% endfor -%}
-    </ul>
-</nav>
+        {%- endfor -%}</ul></nav>
