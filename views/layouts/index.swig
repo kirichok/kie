@@ -36,7 +36,7 @@
     <!--<div class="preloader-anim la-animate"></div>-->
     <div class="loading-anim">Loading</div>
 </div>
-<div id="wrap-content" class="wrap-content">
+<div id="wrap-site" class="wrap-site">
     {% include 'header.swig' %}
     {% include 'menu.swig' %}
     {% block main %}

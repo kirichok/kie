@@ -3,7 +3,7 @@
     <span class="menu-btn-open" id="menu-btn-open">Menu</span>
     <span class="toggle-fixed fa fa-thumb-tack" data-toggle="tooltip" data-placement="top" title="Fixed top"></span>
 </div>
-<nav id="wrap-menu" class="wrap-menu">
+<nav id="main-menu" class="main-menu">
 	<span id="menu-btn-close" class="menu-btn-close">
 		<svg>
             <use xlink:href="#icon-close"></use>

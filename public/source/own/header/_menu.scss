@@ -1,4 +1,4 @@
-/*.wrap-content {
+/*.wrap-site {
   @include transition(transform 0.4s);
 
   &.menu-active {
@@ -11,7 +11,7 @@
   }
 }*/
 
-.wrap-menu {
+.main-menu {
   background: $brand-primary-hue;
   position: fixed;
   top: 0;
@@ -300,7 +300,7 @@ body.mobile-view{
       display: none;
     }
   }
-  .wrap-content {
+  .wrap-site {
     padding: 0 0 50px 0;
   }
 }
