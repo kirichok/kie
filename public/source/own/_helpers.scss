@@ -216,6 +216,10 @@
     @include decor($brand-primary);
   }
 
+/*  &-primary-hue {
+    @include decor($brand-primary-hue);
+  }*/
+
   &-success {
     @include decor($brand-success);
   }

@@ -1,0 +1,34 @@
+/*Orders*/
+.orders {
+  color: #777;
+  .row {
+    border-bottom: 1px solid $brand-default-hue;
+    div[class^="col-"] {
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+      margin-right: -4px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .workname {
+      display: block;
+      font-weight: 700;
+      color: $brand-primary;
+      text-decoration: none;
+      &:hover {
+        color: $brand-info-hue;
+      }
+    }
+    small, span {
+      color: #9c9c9c;
+      margin-right: 10px;
+    }
+    .btn {
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+    }
+  }
+}

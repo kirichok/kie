@@ -19,7 +19,7 @@
 /********************/
 /********************/
 /********************/
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900,200);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 * {
   -webkit-box-sizing: border-box;
@@ -42,7 +42,7 @@ body {
   overflow-y: scroll;
   background-color: #d8d8d8;
   color: #333333;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 p {
   font-size: 16px;
@@ -1334,12 +1334,11 @@ body.mobile-view .wrap-site {
   }
 }*/
 .btn {
-  min-width: 180px;
-  font-size: 26px;
-  line-height: 48px;
+  min-width: 100px;
+  line-height: 36px;
   font-weight: normal;
   color: #ffffff;
-  padding: 0 24px;
+  padding: 0 20px;
   -webkit-transition: background, 0.25s, cubic-bezier(0.4, 1, 0.3, 1);
   -moz-transition: background, 0.25s, cubic-bezier(0.4, 1, 0.3, 1);
   -o-transition: background, 0.25s, cubic-bezier(0.4, 1, 0.3, 1);
@@ -2853,20 +2852,24 @@ input {
     }
   }
 }*/
-.decor-default {
-  background-color: #ffffff; }
-.decor-default-hue {
-  background-color: #d8d8d8; }
-.decor-primary {
-  background-color: #7266ba; }
-.decor-success {
-  background-color: #46be8a; }
-.decor-info {
-  background-color: #39bee8; }
-.decor-warning {
-  background-color: #f2a654; }
-.decor-danger {
-  background-color: #ff69b4; }
+.decor {
+  /*  &-primary-hue {
+      @include decor($brand-primary-hue);
+    }*/ }
+  .decor-default {
+    background-color: #ffffff; }
+  .decor-default-hue {
+    background-color: #d8d8d8; }
+  .decor-primary {
+    background-color: #7266ba; }
+  .decor-success {
+    background-color: #46be8a; }
+  .decor-info {
+    background-color: #39bee8; }
+  .decor-warning {
+    background-color: #f2a654; }
+  .decor-danger {
+    background-color: #ff69b4; }
 
 .f-l {
   float: left; }
@@ -3907,3 +3910,29 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     }
   }
 }*/
+/*Orders*/
+.orders {
+  color: #777; }
+  .orders .row {
+    border-bottom: 1px solid #d8d8d8; }
+    .orders .row div[class^="col-"] {
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+      margin-right: -4px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+    .orders .row .workname {
+      display: block;
+      font-weight: 700;
+      color: #7266ba;
+      text-decoration: none; }
+      .orders .row .workname:hover {
+        color: #34aed4; }
+    .orders .row small, .orders .row span {
+      color: #9c9c9c;
+      margin-right: 10px; }
+    @media (max-width: 992px) {
+      .orders .row .btn {
+        width: 100%; } }
