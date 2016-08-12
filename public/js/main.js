@@ -1,5 +1,14 @@
 var menu;
 
+$(window).resize(function () {
+    if ($(window).width() < 481) {
+        $("body").addClass("mobile-view");
+    }
+    else {
+        $("body").removeClass("mobile-view");
+    }
+});
+
 $(function () {
     $('.preloader-anim').removeClass("la-animate");
     $('.preloader').fadeOut(500);
