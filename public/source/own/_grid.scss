@@ -166,10 +166,10 @@ div[class^=decor] {
   }
 
   .content {
-    padding: $grid-padding ($grid-padding * 1.25) 0;
-    @media(max-width: 480px) {
+    padding: ($grid-padding * 0.75) ($grid-padding * 0.5);
+    /*@media(max-width: 480px) {
       padding: $grid-padding ($grid-padding + 5) 0;
-    }
+    }*/
   }
 
   .footer {

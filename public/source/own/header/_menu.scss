@@ -10,6 +10,11 @@
     }
   }
 }*/
+.wrap-site.menu-active {
+  @media (max-width: 992px){
+    height: 100%;
+  }
+}
 
 .main-menu {
   background: $brand-primary-hue;
