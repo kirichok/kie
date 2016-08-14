@@ -27,7 +27,7 @@ $(function () {
     //});
 
     menu = new Menu();
-    menu.build(menu.testData());
+    //menu.build(menu.testData());
     menu.init();
 });
 

@@ -1,5 +1,46 @@
 var WebSocketServer = require('ws').Server;
+var Client = require('./chatServer');
+var wss = null;
 
+exports.wss_init = function(server){
+    wss = new WebSocketServer({server: server});
+    wss.on('connection', function (socket) {
+        //console.log(socket.upgradeReq.url, socket.readyState);
+
+        var client = new Client(socket);
+
+        /*socket.on('error', function () {
+            //console.log('0!!!', process.memoryUsage().heapUsed);
+            //client.destroy();
+            //client.socket = null;
+            //client = null;
+
+            //console.log(process.memoryUsage().heapUsed);
+        });*/
+
+        /*socket.on('message', function (message) {
+            console.log(message, arguments);
+        });
+
+        socket.on('error', function () {
+            console.log('error', arguments);
+        });
+
+        socket.on('close', function () {
+            console.log('close', arguments);
+        });*/
+    });
+    wss.on('error', function () {
+        console.log('wss error');
+        client.destroy();
+        client.socket = null;
+        client = null;
+    });
+};
+exports.wss = wss;
+
+
+/*
 exports.wss_init = function (server) {
     console.log(server);
     return;
@@ -68,3 +109,4 @@ exports.wss_init = function (server) {
     });
 };
 
+*/
