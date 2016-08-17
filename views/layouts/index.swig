@@ -33,7 +33,7 @@
 </head>
 <body>
 <div class="preloader">
-    <!--<div class="preloader-anim la-animate"></div>-->
+    <div class="preloader-anim la-animate"></div>
     <div class="loading-anim">Loading</div>
 </div>
 <div id="wrap-site" class="wrap-site">

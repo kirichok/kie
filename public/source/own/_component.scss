@@ -1,7 +1,7 @@
 .breadcrumb {
   border-radius: 0;
   background-color: transparent;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   li{
     font-size: 18px;
     font-weight: 600;
@@ -174,12 +174,12 @@
 }*/
 
 .btn {
-  min-width: 180px;
-  font-size: 26px;
-  line-height: 48px;
+  min-width: 100px;
+  line-height: 36px;
   font-weight: normal;
   color: $text-light;
-  padding: 0 24px;
+  padding: 0 20px;
+  border-color: transparent;
   @include transition(background, 0.25s, $bezie-1);
 
   &-default {

@@ -1,8 +1,49 @@
 var menu;
 
+$(window).on('load', function(){
+    //Preloader
+    setTimeout(function(){
+        $('.preloader-anim').removeClass("la-animate");
+    }, 600);
+
+    setTimeout(function(){
+        $('.preloader').fadeOut(500);
+    }, 800);
+});
+
+var originalText = $(".loading-anim").text(),
+    i  = 0;
+setInterval(function() {
+
+    $(".loading-anim").append(".");
+    i++;
+
+    if(i == 4)
+    {
+        $(".loading-anim").html(originalText);
+        i = 0;
+    }
+
+}, 300);
+
+if($(window).width() < 481){
+    $("body").addClass("mobile-view");
+}
+else{
+    $("body").removeClass("mobile-view");
+}
+$(window).resize(function () {
+    if ($(window).width() < 481) {
+        $("body").addClass("mobile-view");
+    }
+    else {
+        $("body").removeClass("mobile-view");
+    }
+});
+
 $(function () {
-    $('.preloader-anim').removeClass("la-animate");
-    $('.preloader').fadeOut(500);
+    /*$('.preloader-anim').removeClass("la-animate");
+    $('.preloader').fadeOut(500);*/
 
 
     //$.ajax({
