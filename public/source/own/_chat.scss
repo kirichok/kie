@@ -1,0 +1,267 @@
+.chat {
+  /*height: calc(100vh - 180px);*/
+  /*overflow: scroll;*/
+
+  &[class^=col-] {
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+
+    img {
+      display: block;
+      border-radius: 20px;
+      height: 100%;
+    }
+
+    .status {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      position: absolute;
+
+      &.off {
+        border: 1px solid #5a5a5a;
+        background: #ffffff;
+      }
+
+      &.online {
+        background: #4caf50;
+      }
+
+      &.offline {
+        background: #ed4e6e;
+      }
+
+      &.busy {
+        background: #ffc107;
+      }
+    }
+  }
+}
+
+.chat-users {
+  height: calc(100vh - 180px);
+  padding: $grid-padding;
+
+  h6 {
+    font-size: 20px;
+    margin: 0 0 $grid-padding;
+  }
+
+  .user {
+    position: relative;
+    padding: 0 0 0 50px;
+    display: block;
+    cursor: pointer;
+    margin: 0 0 $grid-padding;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    .avatar {
+      top: 0;
+      left: 0;
+    }
+
+    .status {
+      bottom: 0;
+      left: 28px;
+    }
+
+    .name {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .mood {
+      font: 200 14px/20px $font-family-sans-serif;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.chat-body {
+  //position: relative;
+  //padding: 0 0 40px;
+  height: calc(100vh - 180px);
+  padding: $grid-padding $grid-padding 0;
+  @include clearfix;
+
+  h6 {
+    font-size: 20px;
+    margin: 0 0 $grid-padding;
+  }
+
+  .answer {
+    position: relative;
+    max-width: 600px;
+    overflow: hidden;
+    clear: both;
+    @include clearfix;
+
+    .avatar {
+      bottom: 36px;
+
+      .status {
+        bottom: 0;
+      }
+    }
+
+    .name {
+      font-size: 14px;
+      line-height: 36px;
+    }
+
+    .text {
+      padding: 12px;
+      font-size: 16px;
+      line-height: 26px;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        border: 18px solid transparent;
+        border-bottom-width: 0;
+      }
+    }
+
+    .time {
+      font-size: 16px;
+      line-height: 36px;
+      position: relative;
+      padding-bottom: 1px;
+    }
+
+    &.left {
+      padding: 0 0 0 58px;
+      text-align: left;
+      float: left;
+
+      .avatar {
+        left: 0;
+
+        .status {
+          right: 4px;
+        }
+      }
+
+      .text {
+        background: #ebebeb;
+        color: $text-dark;
+        border-radius: 8px 8px 8px 0;
+
+        &:before {
+          left: -30px;
+          border-right-color: #ebebeb;
+          border-right-width: 12px;
+        }
+      }
+
+      .time {
+        padding-left: 12px;
+        color: $text-dark;
+      }
+    }
+
+    &.right {
+      padding: 0 58px 0 0;
+      text-align: right;
+      float: right;
+
+      .avatar {
+        right: 0;
+
+        .status {
+          left: 4px;
+        }
+      }
+
+      .text {
+        background: $brand-primary;
+        color: $text-light;
+        border-radius: 8px 8px 0 8px;
+
+        &:before {
+          right: -30px;
+          border-left-color: $brand-primary;
+          border-left-width: 12px;
+        }
+      }
+
+      .time {
+        padding-right: 12px;
+        color: $text-dark;
+      }
+    }
+
+    &-add {
+      //position: absolute;
+      //bottom: 0;
+      //left: -20px;
+      //right: -20px;
+      clear: both;
+      position: relative;
+      margin: $grid-padding (-$grid-padding) (-$grid-padding);
+      padding: $grid-padding;
+      background: $brand-success;
+      color: $brand-default;
+
+      input {
+        border: none;
+        background: none;
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 0;
+        &:-moz-placeholder {
+            color: $brand-default;
+          }
+          &::-moz-placeholder {
+            color: $brand-default;
+          }
+          &:-ms-input-placeholder {
+            color: $brand-default;
+          }
+          &::-webkit-input-placeholder {
+            color: $brand-default;
+          }
+      }
+
+      .answer-btn {
+        display: block;
+        cursor: pointer;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 50%;
+        margin-top: -18px;
+
+        &-1 {
+          background: url('../img/icon-40.png') 50% 50% no-repeat;
+          right: 56px;
+        }
+        &-2 {
+          background: url('../img/icon-41.png') 50% 50% no-repeat;
+          right: 20px;
+        }
+      }
+    }
+  }
+}
