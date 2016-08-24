@@ -6,7 +6,7 @@ var int = function(){
     console.log(process.memoryUsage().heapUsed);
 };
 
-setInterval(int, 300);
+//setInterval(int, 300);
 
 function Client(socket) {
     this.socket = socket;
@@ -20,14 +20,13 @@ function Client(socket) {
 
 Client.prototype.init = function () {
     this.options(this.socket.upgradeReq.url.split('/'));
-    this.addToRoom();
+    this.addToRoom(this.room);
     this.events();
 };
 
 Client.prototype.destroy = function (skip) {
     rooms[this.room].remove(this.handle);
     this.handle = null;
-    //this.socket = null;
     this.id = null;
 };
 
@@ -52,17 +51,19 @@ Client.prototype.options = function (option) {
     this.id = option[2];
 };
 
-Client.prototype.addToRoom = function () {
+Client.prototype.addToRoom = function (room) {
     var self = this;
-    rooms[this.room].add(this.handle = function (data) {
-        //console.log('data: ' + self.id + ' -> ' + data);
-        self.send(/*JSON.stringify*/data);
+    rooms[room].add(this.handle = function (data) {
+        self.send(data);
     });
 };
 
 Client.prototype.onMessage = function (data) {
+    // check for valid data
+    // parse data
+    // check room: if new then add to this room
+
     rooms[this.room].message('"' + this.id + '" ' + data);
-    //console.log('Data from Room: ' + this.room.name + ' Id: ' + this.id + ' Data: ' + data);
 };
 
 Client.prototype.onError = function (error) {
@@ -71,19 +72,13 @@ Client.prototype.onError = function (error) {
 };
 
 Client.prototype.onClose = function () {
-    //console.log('Close');
-    this.destroy(true);
+    this.destroy();
     this.socket.close();
-    //this.socket = null;
-    //this.destroy(true);
-
-    //console.log(process.memoryUsage().heapUsed);
-
 };
 
 Client.prototype.send = function (data) {
     if (this.socket.readyState = 1) {
-        this.socket.send({M: data, Owner: this.id});
+        this.socket.send(JSON.stringify({M: data, Owner: this.id}));
     }
 };
 
@@ -94,12 +89,10 @@ function Room(name) {
 
 Room.prototype.add = function (handle) {
     this.ee.addListener(this.name, handle);
-    //console.log(EventEmitter.listenerCount(ee, this.name));
 };
 
 Room.prototype.remove = function (handle) {
     this.ee.removeListener(this.name, handle);
-    //console.log(EventEmitter.listenerCount(ee, this.name)/* this.ee.event(this.name)*/);
 };
 
 Room.prototype.message = function (data) {
