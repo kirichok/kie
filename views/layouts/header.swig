@@ -1,7 +1,6 @@
 <header class="header">
     <div class="unit title">
-        <h5 class="primary font-weight-700">Dashboard</h5>
-        <h6 class="secondary">Dashboard</h6>
+        <h4 class="primary font-weight-700">Dashboard</h4>
     </div>
     <div class="unit morphsearch" id="morphsearch">
         <form class="morphsearch-form">

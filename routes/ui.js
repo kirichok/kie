@@ -86,7 +86,7 @@ router.get('/', function (req, res, next) {
         }
     ];
 
-    res.render('orders', {title: 'Hello !!!', current_item: '', menu: menu});
+    res.render('chat', {title: 'Hello !!!', current_item: '', menu: menu});
 });
 
 module.exports = router;

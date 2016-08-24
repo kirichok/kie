@@ -8,7 +8,7 @@
     <li><a href="index.html"><i class="fa fa-home"></i></a></li>
     <li class="active">Замовлення</li>
 </ol>
-<div class="container-fluid decor-default m-lr-10 p-lr-20 orders">
+<div class="content container-fluid decor-default m-tlr orders">
     <h2>Фільтри по предметам і видам робіт</h2>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-lg-4">
