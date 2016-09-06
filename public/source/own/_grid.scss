@@ -19,26 +19,26 @@ div[class^=decor] {
 }
 
 .aside {
-  width: 90px;
+  width: 64px;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   z-index: 400;
   background-color: $brand-info;
-  @media (max-width: 768px) {
+  /*@media (max-width: 768px) {
     width: 64px;
-  }
+  }*/
 
   .btn-logo {
     display: block;
-    height: 90px;
+    height: 64px;
     position: relative;
-    background: url('../img/header.png') 0 0 $brand-primary-hue;
-    @media (max-width: 768px) {
+    background: url('../img/header.png') 6% 10% $brand-primary-hue;
+    /*@media (max-width: 768px) {
       height: 64px;
       background-position: 6% 10%;
-    }
+    }*/
   }
 
   /*.btn-profile {
@@ -63,7 +63,7 @@ div[class^=decor] {
 }
 
 .wrap-site {
-  padding: 0 0 50px 90px;
+  padding: 0 0 50px 64px;
   position: relative;
   background: #ececec;
   min-height: 100%;
@@ -73,18 +73,18 @@ div[class^=decor] {
   }
   .header {
     background-color: $brand-primary;
-    height: 90px;
+    height: 64px;
     z-index: 300;
-    @media (max-width: 768px) {
+    /*@media (max-width: 768px) {
       height: 64px;
-    }
+    }*/
 
     > .unit {
       position: absolute;
 
       &.title {
         color: $text-light;
-        padding: 20px 0 0 20px;
+        padding: 10px 0 0 20px;
         max-width: calc(100% - 990px);
 
         @include media('lg') {
@@ -107,7 +107,7 @@ div[class^=decor] {
       &.morphsearch {
         z-index: 400;
         position: absolute;
-        top: 15px;
+        top: 8px;
         right: 290px;
         width: 450px;
 
@@ -134,12 +134,10 @@ div[class^=decor] {
       &.email {
         top: 0;
         right: 180px;
-        width: 90px;
-        height: 90px;
+        width: 64px;
+        height: 64px;
         @media(max-width: 768px) {
           right: 128px;
-          width: 64px;
-          height: 64px;
         }
       }
 
@@ -147,12 +145,10 @@ div[class^=decor] {
         position: absolute;
         top: 0;
         right: 90px;
-        width: 90px;
-        height: 90px;
+        width: 64px;
+        height: 64px;
         @media(max-width: 768px) {
-          right: 64px;
-          width: 64px;
-          height: 64px;
+          right: 74px;
         }
       }
 
@@ -166,10 +162,10 @@ div[class^=decor] {
   }
 
   .content {
-    padding: $grid-padding ($grid-padding * 1.25) 0;
-    @media(max-width: 480px) {
+    padding: ($grid-padding * 0.75) ($grid-padding*1.25);
+    /*@media(max-width: 480px) {
       padding: $grid-padding ($grid-padding + 5) 0;
-    }
+    }*/
   }
 
   .footer {
@@ -214,7 +210,7 @@ div[class^=decor] {
   color: #fff;
   cursor: pointer;
   font-size: 36px;
-  width: 90px;
+  width: 64px;
   margin-bottom: 30px;
   display: inline-block;
   text-align: center;
@@ -224,10 +220,7 @@ div[class^=decor] {
   &.active{
     opacity: 1;
   }
-  @media(max-width: 768px) {
-    width: 64px;
-  }
-   @media(max-width: 497px) {
+  @media(max-width: 497px) {
     display: none;
   }
 }

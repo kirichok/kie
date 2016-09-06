@@ -33,7 +33,7 @@
 </head>
 <body>
 <div class="preloader">
-    <!--<div class="preloader-anim la-animate"></div>-->
+    <div class="preloader-anim la-animate"></div>
     <div class="loading-anim">Loading</div>
 </div>
 <div id="wrap-site" class="wrap-site">
@@ -62,12 +62,18 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script src="js/jquery.nicescroll.min.js"></script>
+<script>
+    $(".chat-users").niceScroll();
+    $(".chat-body").niceScroll();
+    $(".chat-messages").niceScroll();
+</script>
 <script src="js/classie.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/main.js"></script>
 <!--<script src="js/ui.js"></script>-->
 <script src="js/search.js"></script>
 <script src="js/sweetalert.min.js"></script>
+<script src="js/chat.js"></script>
 <!--<script src="js/jquery.easypiechart.min.js"></script>-->
 <!--<script src="js/calendar.js"></script>-->
 {% block js %}

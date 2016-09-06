@@ -1,6 +1,19 @@
 // If several columns with margin between
 //$grid-gutter-width: 40px;
-
+.m-tlr {
+  margin: $grid-padding $grid-padding 0;
+  @media (max-width: 768px){
+    margin: 0;
+  }
+}
+/*.p-lr {
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (max-width: 480px){
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}*/
 /*.row.row-broken {
   padding-bottom: 0;*/
 
@@ -215,6 +228,10 @@
   &-primary {
     @include decor($brand-primary);
   }
+
+/*  &-primary-hue {
+    @include decor($brand-primary-hue);
+  }*/
 
   &-success {
     @include decor($brand-success);

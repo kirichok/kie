@@ -1,6 +1,6 @@
 {% extends 'index.swig' %}
 {% block main %}
-<main class="content container-fluid">
+<main>
     {% block content %}
     {% endblock %}
 </main>
