@@ -193,13 +193,13 @@
       }
 
       .text {
-        background: $brand-primary;
-        color: $text-light;
+        background: #C5E8CF;
+        color: $text-dark;
         border-radius: 8px 8px 0 8px;
 
         &:before {
           right: -30px;
-          border-left-color: $brand-primary;
+          border-left-color: #C5E8CF;
           border-left-width: 12px;
         }
       }

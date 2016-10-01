@@ -1,40 +1,33 @@
 /*Orders*/
 .orders {
   color: #777;
-  > .row {
-    border-bottom: 1px solid $brand-default-hue;
-    &:first-of-type {
-      border-top: 1px solid $brand-default-hue;
+  .workname {
+    font-weight: bold;
+    color: $brand-primary-hue-light;
+  }
+  .year {
+    font-size: 1.25em;
+  }
+  .btn {
+    position: relative;
+    padding-left: 10px;
+    text-align: left;
+    @media (max-width: 992px) {
+      width: 100%;
+      text-align: center;
     }
-    &:last-of-type {
-      border-bottom: none;
+    .notification-count {
+      width: 25px;
+      height: 25px;
+      top: 5px;
+      right: 5px;
+      line-height: 25px;
+      background-color: #40A05D;
     }
-    div[class^="col-"] {
-      float: none;
-      display: inline-block;
-      vertical-align: middle;
-      margin-bottom: 0;
-      margin-right: -5px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    .workname {
-      display: block;
-      font-weight: bold;
-      color: $brand-primary;
-      text-decoration: none;
-      &:hover {
-        color: $brand-info-hue;
-      }
-    }
-    small, span {
-      color: #9c9c9c;
-      margin-right: 10px;
-    }
-    .btn {
-      @media (max-width: 992px) {
-        width: 100%;
-      }
+  }
+  .btn-success:hover {
+    .notification-count {
+      background-color: #3A9254;
     }
   }
 }

@@ -152,7 +152,7 @@ $fade-time: 0.3s;
     }
 
     &:hover {
-      background-color: $brand-info-hue;
+      background-color: $brand-success;
     }
 
     a, span {
@@ -320,7 +320,7 @@ body.mobile-view{
     text-align: center;
     color: $text-light;
     font-size: 28px;
-    background: $brand-info;
+    //background: $brand-success;
     cursor: pointer;
     z-index: 450;
     /*@media(max-width: 768px) {
@@ -370,7 +370,7 @@ body.mobile-view{
 
 .notification-count{
   position: absolute;
-  background: $brand-info;
+  background: $brand-success-hue;
   color: $text-light;
   width: 20px;
   line-height: 20px;

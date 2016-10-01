@@ -1,16 +1,47 @@
 .row {
   padding-bottom: 0;
   margin-bottom: 0;
+  padding-top: $grid-padding * 0.25;
+  padding-bottom: $grid-padding * 0.25;
+  &.table-row{
+    margin-left: 0;
+    margin-right: 0;
+    &:hover {
+      background-color: #F5F5F5;
+    }
+    &:nth-child(even) {
+      border-bottom: 1px solid #E0E0E0;
+      border-top: 1px solid #E0E0E0;
+    }
+    div[class^="col-"] {
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+      margin-right: -5px;
+      padding-top: $grid-padding * 0.25;
+      padding-bottom: $grid-padding * 0.25;
+    }
+    div:not(:first-child) {
+      text-align: center;
+      line-height: 1em;
+    }
+  }
+}
+
+a.row {
+  display: block;
+  color: #777;
 }
 
 div[class^=col-] {
   margin-bottom: 20px;
   padding-left: 10px;
   padding-right: 10px;
-  @media (max-width: 480px) {
+  /*@media (max-width: 480px) {
     padding-left: 0;
     padding-right: 0;
-  }
+  }*/
 }
 
 div[class^=decor] {
@@ -25,7 +56,7 @@ div[class^=decor] {
   left: 0;
   height: 100%;
   z-index: 400;
-  background-color: $brand-info;
+  background-color: #4D5B80;
   /*@media (max-width: 768px) {
     width: 64px;
   }*/
@@ -162,7 +193,11 @@ div[class^=decor] {
   }
 
   .content {
-    padding: ($grid-padding * 0.75) ($grid-padding*1.25);
+    padding: 0;
+    margin: $grid-padding ($grid-padding * 1.25) 0;
+    @media (max-width: 768px){
+      margin: 0;
+    }
     /*@media(max-width: 480px) {
       padding: $grid-padding ($grid-padding + 5) 0;
     }*/
@@ -231,20 +266,14 @@ div[class^=decor] {
   }
   .header{
     position: fixed;
-    width: calc(100% - 90px);
+    width: calc(100% - 64px);
     top: 0;
-    @media(max-width: 768px) {
-      width: calc(100% - 64px);
-    }
     @media(max-width: 497px) {
       width: 100%;
     }
   }
-  .wrap-site .content{
-    margin-top: 90px;
-    @media(max-width: 768px) {
-      margin-top: 64px;
-    }
+  .wrap-site main{
+    margin-top: 84px;
   }
   .filter .cd-main-content.is-fixed .cd-tab-filter-wrapper{
     top: 90px;

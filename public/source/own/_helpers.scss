@@ -1,7 +1,7 @@
 // If several columns with margin between
 //$grid-gutter-width: 40px;
 .m-tlr {
-  margin: $grid-padding $grid-padding 0;
+  margin: $grid-padding ($grid-padding * 1.25) 0;
   @media (max-width: 768px){
     margin: 0;
   }
